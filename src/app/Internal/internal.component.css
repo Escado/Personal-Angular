@@ -11,7 +11,7 @@ nav.navbar {
 
 .intro-continue {
     font-size: 1.4em;
-    cursor: pointer;
+    cursor: pointer;    
 }
 
 .intro-continue::after {
