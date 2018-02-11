@@ -6,7 +6,7 @@ import { InternalRoutingModule } from './internal-routing.module'
 
 @NgModule({
   declarations: [
-    
+
   ],
   imports: [
     InternalRoutingModule,

@@ -4,33 +4,28 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { InternalComponent } from './internal.component'
 
-import { ProjectsComponent, ProfileComponent, EducationComponent, ExperienceComponent, IndexComponent } from './internal-components-bucket'
+import { IndexComponent } from './internal-components-bucket'
+import { PagesModule } from './pages/pages.module';
 
 const appRoutes: Routes = [
-  { path: '', component: InternalComponent },
-  { path: 'projects', component: ProjectsComponent },
-  { path: 'profile', component: ProfileComponent },
-  { path: 'education', component: EducationComponent },
-  { path: 'experience', component: ExperienceComponent },
-  { path: 'index', component: IndexComponent }
+  { path: 'intro', component: InternalComponent },
+  { path: 'index', component: IndexComponent },
+  { path: 'pages', loadChildren: './pages/pages.module#PagesModule' },
+  { path: '', redirectTo: 'intro', pathMatch: 'full' }
 
 ];
 
 @NgModule({
   declarations: [
     InternalComponent,
-    ProjectsComponent,
-    ProfileComponent,
-    EducationComponent,
-    ExperienceComponent,
     IndexComponent
   ],
-  imports: [ 
+  imports: [
     RouterModule.forChild(appRoutes),
-    
+    PagesModule
   ],
   providers: [],
 
-  exports: [ RouterModule ]
+  exports: [RouterModule]
 })
 export class InternalRoutingModule { }

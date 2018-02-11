@@ -1,11 +1,13 @@
-import { Component } from '@angular/core' 
+import { Component, HostBinding } from '@angular/core'
+import { fadeOutAnimation } from '../../../helpers/animations/fadeOutAnimation';
 
-@Component ({
+@Component({
     selector: 'experience',
     templateUrl: './experience.component.html',
-    styleUrls: ['./experience.component.css']
+    styleUrls: ['./experience.component.css'],
+    animations: [fadeOutAnimation],
+    host: { '[@fadeOutAnimation]': '' }
 })
 
 export class ExperienceComponent {
-    
 } 

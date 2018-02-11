@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { InternalModule } from './Internal/internal.module'
@@ -18,9 +19,9 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes, { enableTracing: true}),
-    
-    InternalModule
+    RouterModule.forRoot(appRoutes, { useHash: true }),
+    InternalModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

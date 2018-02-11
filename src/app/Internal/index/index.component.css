@@ -46,27 +46,6 @@
     background-color: #ffffff;
 }
 
-footer {
-    text-align: center;
-    padding: 1rem;
-}
-
-    footer > div > ul > li > a > img {
-        height: 3em;
-    }
-
-
-
-    footer > div > ul {
-        display: inline-block;
-        list-style: none;
-        padding: 0;
-    }
-
-        footer > div > ul > li {
-            float: left;
-        }
-
 a.nav-link {
     font-weight: bold;
 }
