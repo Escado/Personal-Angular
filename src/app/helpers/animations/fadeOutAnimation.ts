@@ -10,7 +10,7 @@ export const fadeOutAnimation =
     transition(':enter', [
       query('div', [
         style({ opacity: 0 }),
-        stagger(75, animate(500, style({ opacity: 1 })))
+        stagger(0, animate(500, style({ opacity: 1 })))
       ]),
     ])
   ])

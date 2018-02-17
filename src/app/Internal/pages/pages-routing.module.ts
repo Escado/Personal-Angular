@@ -1,8 +1,9 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
-import { EducationComponent, ExperienceComponent, ProfileComponent, ProjectsComponent } from "./pages-components-bucket";
+import { EducationComponent, ExperienceComponent, ProfileComponent, ProjectComponent } from "./pages-components-bucket";
 import { PagesComponent } from "./pages.component";
+import { CommonModule } from "@angular/common";
 
 const pagesRoutes: Routes = [
     {
@@ -10,7 +11,7 @@ const pagesRoutes: Routes = [
             { path: 'profile', component: ProfileComponent },
             { path: 'education', component: EducationComponent },
             { path: 'experience', component: ExperienceComponent },
-            { path: 'projects', component: ProjectsComponent },
+            { path: 'projects', component: ProjectComponent },
             { path: '**', redirectTo: 'profile', pathMatch: 'full' }
         ]
     }
@@ -22,10 +23,11 @@ const pagesRoutes: Routes = [
         ProfileComponent,
         EducationComponent,
         ExperienceComponent,
-        ProjectsComponent
+        ProjectComponent
     ],
     imports: [
-        RouterModule.forChild(pagesRoutes)
+        RouterModule.forChild(pagesRoutes),
+        CommonModule
     ],
     exports: [
         RouterModule

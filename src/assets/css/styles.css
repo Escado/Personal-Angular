@@ -71,10 +71,6 @@ body {
     }
 }
 
-.collapse.in {
-    display: block;
-}
-
 .mobile-visible {
     display: none;
 }

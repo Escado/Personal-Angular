@@ -10,4 +10,5 @@ import { slideInFromTopAnimation } from '../../../helpers/animations/slideInFrom
 })
 
 export class NavBarComponent {
+    public toggled: boolean;
 } 

@@ -1,0 +1,46 @@
+<div *ngFor="let project of projects; let i = index">
+  <div class="row">
+    <div class="project-img-container col-md-6 col-lg-4 text-center">
+      <div class="image-wrapper">
+        <img class="mx-auto project-img" src="{{project.imageUrl?.length > 0 ? project.imageUrl : 'assets/img/placeholder.png'}}"
+        />
+        <div *ngIf="project.projectUrl?.length != 0" class="image-link">
+          <div>
+            <a target="_blank" href="{{project.projectUrl}}" class="">
+              {{project.projectUrlShort}}
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-6 col-lg-8 my-auto">
+      <div class="project-info">
+        <div>
+          <div class="title text-center">
+            <h2>
+              <b>“{{project.name}}”</b>
+            </h2>
+          </div>
+          <div>
+            <span class="text-justified">
+              {{project.description}}
+            </span>
+          </div>
+          <footer>
+            <span class="">
+              <span class="badge badge-pill badge-success" *ngFor="let tech of project.technologies">
+                <b>{{tech}}</b>
+              </span>
+            </span>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="i != projects.length - 1 ">
+    <hr/>
+  </div>
+
+</div>

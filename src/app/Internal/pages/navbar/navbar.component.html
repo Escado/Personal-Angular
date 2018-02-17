@@ -10,7 +10,7 @@
             </button>
         </div>
         <div id="navbar" class="collapse navbar-collapse" [ngClass]="{ 'in' : toggled }">
-            <ul class="navbar-nav mx-auto">
+            <ul (click)="toggled = !toggled" class="navbar-nav mx-auto">
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/index">
                         Home

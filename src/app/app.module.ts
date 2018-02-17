@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { InternalModule } from './Internal/internal.module'
 import { AppComponent } from './app.component';
+import { ProjectService } from './Internal/pages/projects/project.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 const appRoutes: Routes = [
@@ -21,9 +23,13 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes, { useHash: true }),
     InternalModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ProjectService,
+    HttpClient,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

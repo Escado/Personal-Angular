@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { InternalRoutingModule } from './internal-routing.module'
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -10,6 +11,7 @@ import { InternalRoutingModule } from './internal-routing.module'
   ],
   imports: [
     InternalRoutingModule,
+    CommonModule
   ],
   providers: [],
 })
