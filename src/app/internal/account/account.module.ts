@@ -11,4 +11,4 @@ import { AccountRoutingModule } from './account-routing.module';
     ],
     providers: [],
 })
-export class PublicModule { }
+export class AccountModule { }
