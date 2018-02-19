@@ -14,9 +14,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 const appRoutes: Routes = [
-  { path: '', loadChildren: './public/public.module#PublicModule' },
-  { path: 'admin', loadChildren: './internal/internal.module#InternalModule' }
-
+  { path: '', loadChildren: './public/public.module#PublicModule' }
 ];
 
 @NgModule({
