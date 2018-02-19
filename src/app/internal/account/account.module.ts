@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 
-import { PublicRoutingModule } from './public-routing.module';
+import { AccountRoutingModule } from './account-routing.module';
 
 @NgModule({
     imports: [
-        PublicRoutingModule
+        AccountRoutingModule
     ],
     exports: [],
     declarations: [

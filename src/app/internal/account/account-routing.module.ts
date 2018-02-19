@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { LoginComponent, RecoverPasswordComponent, ResetPasswordComponent } from './public-components.index';
-import { PublicComponent } from './public.component';
+import { LoginComponent, RecoverPasswordComponent, ResetPasswordComponent } from './account-components.index';
+import { AccountComponent } from './account.component';
 
 
 const routes: Routes = [
-  { path: '', component: PublicComponent, children: [
+  { path: '', component: AccountComponent, children: [
       { path: 'login', component: LoginComponent },
       { path: 'recover', component: RecoverPasswordComponent },
       { path: 'reset', component: ResetPasswordComponent }
@@ -25,9 +25,9 @@ const routes: Routes = [
     LoginComponent,
     RecoverPasswordComponent,
     ResetPasswordComponent,
-    PublicComponent
+    AccountComponent
   ]
 })
-export class PublicRoutingModule { }
+export class AccountRoutingModule { }
 
 export const routedComponents = [LoginComponent];
