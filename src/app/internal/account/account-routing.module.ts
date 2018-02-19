@@ -6,13 +6,16 @@ import { AccountComponent } from './account.component';
 
 
 const routes: Routes = [
-  { path: '', component: AccountComponent, children: [
+  { 
+    path: 'account', component: AccountComponent, children: [
       { path: 'login', component: LoginComponent },
       { path: 'recover', component: RecoverPasswordComponent },
-      { path: 'reset', component: ResetPasswordComponent }
+      { path: 'reset', component: ResetPasswordComponent },
+      { path: '**', redirectTo: 'login', pathMatch: 'full' }
   ]
- },
+ }
 ];
+
 
 @NgModule({
   imports: [
@@ -29,5 +32,3 @@ const routes: Routes = [
   ]
 })
 export class AccountRoutingModule { }
-
-export const routedComponents = [LoginComponent];

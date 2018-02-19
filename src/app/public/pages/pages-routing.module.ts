@@ -15,7 +15,6 @@ const pagesRoutes: Routes = [
             { path: '**', redirectTo: 'profile', pathMatch: 'full' }
         ]
     }
-
 ];
 
 @NgModule({
