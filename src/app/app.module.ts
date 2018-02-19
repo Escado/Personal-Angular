@@ -4,14 +4,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
-import { InternalModule } from './Internal/internal.module'
+import { PublicModule } from './public/public.module'
+import { InternalModule } from "./internal/internal.module";
+
 import { AppComponent } from './app.component';
-import { ProjectService } from './Internal/pages/projects/project.service';
+
+import { ProjectService } from './public/pages/projects/project.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 const appRoutes: Routes = [
-  { path: '', loadChildren: './Internal/internal.module#InternalModule' }
+  { path: '', loadChildren: './public/public.module#PublicModule' },
+  { path: 'admin', loadChildren: './internal/internal.module#InternalModule' }
 
 ];
 
@@ -20,9 +24,11 @@ const appRoutes: Routes = [
     AppComponent,
   ],
   imports: [
+    PublicModule,
+    InternalModule,
+    
     BrowserModule,
     RouterModule.forRoot(appRoutes, { useHash: true }),
-    InternalModule,
     BrowserAnimationsModule,
     HttpClientModule
   ],

@@ -1,5 +1,5 @@
 import { AnimationEntryMetadata } from '@angular/core';
-import { query, animate, state, style, transition, trigger } from '@angular/animations';
+import { query, animate, state, style, transition, trigger, stagger } from '@angular/animations';
 
 // Component transition animations
 export const slideInFromLeftAnimation: AnimationEntryMetadata =
@@ -12,15 +12,9 @@ export const slideInFromLeftAnimation: AnimationEntryMetadata =
       })
     ),
     transition(':enter', [
-      query('*', [
-        style({ transform: 'translateX(-100%)' }),
-        animate('0.8s', style({ transform: 'translateX(0)' }))
-      ])
-    ]),
-    transition(':leave', [
       query('div', [
-        style({ opacity: 1 }),
-        animate('1s', style({ opacity: 0}))
+        style({ transform: 'translateX(-100%)' }),
+        stagger(10, animate('0.3s', style({ transform: 'translateX(0)' })))
       ])
     ])
   ])
