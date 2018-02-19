@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { PublicModule } from './public/public.module'
-import { InternalModule } from "./internal/internal.module";
+import { InternalModule } from './internal/internal.module';
 
 import { AppComponent } from './app.component';
 
