@@ -3,8 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  { path: '', loadChildren: './account/public.module#PublicModule'},
-  //{ path: 'private', loadChildren: './private/private.module#PrivateModule' },
+  { path: '', loadChildren: './account/public.module#PublicModule'}
 ];
 
 @NgModule({
