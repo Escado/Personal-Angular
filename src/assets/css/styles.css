@@ -1,179 +1,183 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-    height: 100%;
-    font-family: "Montserrat",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    color: #5a5a5a;
+  height: 100%;
+  font-family: "Montserrat", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #5a5a5a;
+}
+
+.footer-icon-list>li {
+  margin-right: 0.5em;
+}
+
+.footer-icon-list>li:last-child {
+  margin-right: 0em;
+}
+
+.footer-icon-list {
+    position: relative;
 }
 
 .footer-icon-list > li {
-    margin-right: 0.5em;
-}
-
-.footer-icon-list > li:last-child {
-    margin-right: 0em;
+    position: relative;
 }
 
 .spinner-container {
-    position: absolute;
-    width: 100%;
+  position: absolute;
+  width: 100%;
 }
 
 .spinner {
-    width: 50px;
-    height: 40px;
-    text-align: center;
-    font-size: 10px;
-    margin: auto;
-    margin-top: 15%;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+  margin: auto;
+  margin-top: 15%;
 }
 
-    .spinner > div {
-        background-color: #333;
-        height: 100%;
-        width: 6px;
-        display: inline-block;
-        -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
-        animation: sk-stretchdelay 1.2s infinite ease-in-out;
-    }
+.spinner>div {
+  background-color: #333;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
 
-    .spinner .rect2 {
-        -webkit-animation-delay: -1.1s;
-        animation-delay: -1.1s;
-    }
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
 
-    .spinner .rect3 {
-        -webkit-animation-delay: -1.0s;
-        animation-delay: -1.0s;
-    }
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
 
-    .spinner .rect4 {
-        -webkit-animation-delay: -0.9s;
-        animation-delay: -0.9s;
-    }
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
 
-    .spinner .rect5 {
-        -webkit-animation-delay: -0.8s;
-        animation-delay: -0.8s;
-    }
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
 
 @-webkit-keyframes sk-stretchdelay {
-    0%, 40%, 100% {
-        -webkit-transform: scaleY(0.4)
-    }
-
-    20% {
-        -webkit-transform: scaleY(1.0)
-    }
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4)
+  }
+  20% {
+    -webkit-transform: scaleY(1.0)
+  }
 }
 
 @keyframes sk-stretchdelay {
-    0%, 40%, 100% {
-        transform: scaleY(0.4);
-        -webkit-transform: scaleY(0.4);
-    }
-
-    20% {
-        transform: scaleY(1.0);
-        -webkit-transform: scaleY(1.0);
-    }
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
 }
 
 .mobile-visible {
-    display: none;
-}
-
-
-@media only screen and (max-width: 991px) {
-    .mobile-visible {
-        display: block;
-    }
+  display: none;
 }
 
 @media only screen and (max-width: 991px) {
-    .profile-picture {
-        margin-bottom: 1em;
-    }
+  .mobile-visible {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .profile-picture {
+    margin-bottom: 1em;
+  }
 }
 
 .project-img {
-    max-width: 300px;
-    max-height: 250px;
+  max-width: 300px;
+  max-height: 250px;
 }
 
-
-
 .details-text {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .profile-picture {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
-.table-condensed th, .table-condensed td {
-    padding: 0.45rem;
+.table-condensed th,
+.table-condensed td {
+  padding: 0.45rem;
 }
-
 
 .profile-table tr td:first-child {
-    text-align: right;
-    width: 50%;
-    font-weight: bold;
-    vertical-align: middle;
-
-
+  text-align: right;
+  width: 50%;
+  font-weight: bold;
+  vertical-align: middle;
 }
 
 .row {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .btn {
-    cursor: pointer;
+  cursor: pointer;
 }
-
 
 hr {
-    margin-bottom: 2em;
-    margin-top: 2em;
+  margin-bottom: 2em;
+  margin-top: 2em;
 }
+
 @media only screen and (max-width: 991px) {
-    .edu-info {
-        margin-top: 1em;
-    }
+  .edu-info {
+    margin-top: 1em;
+  }
 }
+
 .edu-img {
-    width: 20em;
+  width: 20em;
 }
 
 .title {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 @media only screen and (max-width: 991px) {
-    .title {
-        margin-top: 3em;
-    }
+  .title {
+    margin-top: 3em;
+  }
 }
 
 footer {
-    text-align: center;
-    padding: 1rem;
+  text-align: center;
+  padding: 1rem;
 }
 
-    footer > div > ul > li > a > img {
-        height: 3em;
-    }
+footer>div>ul>li>a>img {
+  height: 3em;
+}
 
+footer>div>ul {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+}
 
-
-    footer > div > ul {
-        display: inline-block;
-        list-style: none;
-        padding: 0;
-    }
-
-        footer > div > ul > li {
-            float: left;
-        }
+footer>div>ul>li {
+  float: left;
+}
