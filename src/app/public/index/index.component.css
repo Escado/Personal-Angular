@@ -83,3 +83,9 @@ main > div.container {
 .footer-icon-list > li:hover > a + span {
     opacity: 1;
 }
+
+@media only screen and (max-width: 991px) {
+    .title {
+        margin-top: 0em;
+    }
+}
