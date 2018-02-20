@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { PublicModule } from './public/public.module'
-import { InternalModule } from './internal/internal.module';
+import { AdminModule } from './admin/admin.module';
 
 import { AppComponent } from './app.component';
 
@@ -14,7 +14,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 const appRoutes: Routes = [
-  { path: '', loadChildren: './public/public.module#PublicModule' }
+  { path: '', loadChildren: './public/public.module#PublicModule' },
+  { path: 'admin', loadChildren: './admin/admin.module#AdminModule' }
 ];
 
 @NgModule({
@@ -23,7 +24,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     PublicModule,
-    InternalModule,
+    AdminModule,
     
     BrowserModule,
     RouterModule.forRoot(appRoutes, { useHash: true }),
