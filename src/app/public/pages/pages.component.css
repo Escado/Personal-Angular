@@ -1,3 +1,34 @@
 main>div.container {
     padding-top: 2em;
 }
+
+.footer-icon-list > li > a + span {
+    opacity: 0;
+    position: absolute;
+    left: -25px;
+    top: -33px;
+    background: #5a5a5a;
+    width: 100px;
+    font-size: small;
+    z-index: 1;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    transition: 0.5s;
+}
+
+.footer-icon-list > li > a + span::before {
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-top: 7px solid #5a5a5a;
+    border-left: 7px solid transparent; 
+    border-right: 7px solid transparent; 
+    position: absolute;
+    left: 44px;
+    top: 27px;
+}
+
+.footer-icon-list > li:hover > a + span {
+    opacity: 1;
+}

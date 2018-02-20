@@ -83,7 +83,3 @@ main > div.container {
 .footer-icon-list > li:hover > a + span {
     opacity: 1;
 }
-
-/* .footer-icon-list > li > a + span:hover {
-    opacity: 0;
-} */
